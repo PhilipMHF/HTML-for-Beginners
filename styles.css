@@ -1,0 +1,625 @@
+html, *, *::before, *::after, ::before, ::after {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+}
+
+.body-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 1920px;
+    margin: 0 auto;
+}
+
+::-webkit-scrollbar {
+    height: 8px;
+    width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: gray;
+    border-radius: 20px;
+}
+
+#navbar::-webkit-scrollbar {
+    display: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    html {
+        scroll-behavior: smooth;
+    }
+}
+
+
+/*** Header styling ***/
+#header {
+    font-family: 'Roboto Slab', serif;
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    padding: 0;
+    transition: 250ms background-image ease-in-out;
+}
+
+.header-text {
+    font-size: calc(3rem + 2vw);
+    font-weight:bolder;
+    color: black;
+    text-align: center;
+    margin-top: 5vh;
+    height: max-content;
+    width: max-content;
+}
+
+.header-text span {
+    display: block;
+}
+
+
+
+/**** Main content stlyling ****/
+main {
+    font-family: 'Roboto Slab', serif;
+    font-size: 1rem;
+    color: white;
+    background-color: rgb(17, 18, 31);
+    padding: 1rem;
+    transition: 250ms background-color ease-in-out;
+}
+
+main h2 {
+    font-size: 2rem;
+    color: white;
+}
+
+main h3 {
+    font-size: 1.7rem;
+}
+
+main h4 {
+    font-size: 1.5rem;
+}
+
+main p {
+    font-size: 1.1rem;
+    text-align: justify;
+    margin-bottom: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+main ul, main ol {
+    margin: 0;
+    padding: 0 2rem 0;
+    text-align: justify;
+}
+
+main section+section {
+    margin-top: 5rem;
+}
+
+main a {
+    color: white;
+}
+
+figure {
+    display: block;
+    max-width: 95vw;
+    margin: 0 auto;
+}
+
+figure img {
+    width: 100%;
+}
+
+figcaption {
+    text-align: center;
+    font-style: italic;
+    font-size: 0.9rem;
+}
+
+iframe {
+    display: block;
+    margin: 4rem auto 0;
+    width: 90%;
+    aspect-ratio: 1.6;
+}
+
+.markup pre {
+    width: 100%;
+    background-color: rgb(238,238,240);
+    color: black;
+    overflow: auto;
+    padding: 1.5rem;
+}
+
+.gray-bg {
+    padding: 0.1rem 0.4rem;
+    background-color: rgb(167, 167, 167);
+}
+
+/**** main content span font color ****/
+
+
+.red-code {
+    color: #905 !important;
+}
+
+.green-code {
+    color: #690 !important;
+}
+
+.blue-code {
+    color: #07a !important;
+}
+
+.grayed-out-code {
+    color: #708090 !important;
+}
+
+.orange-code {
+    color: #9a6e3a !important;
+}
+
+
+
+/*** Navigation bar in mobile devices up to width=600px ***/
+
+@media only screen and (max-width:600px) {
+
+
+    main {
+        padding-bottom: 2.5rem;
+    }
+
+    #tablet-navbar, #home-dark-container, #menu-dark-mode {
+        display: none;
+        position: absolute;
+        z-index: -1000;
+        width: 0;
+        height: 0;
+    }
+
+    #navigation {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        display: flex;
+        flex-direction: column-reverse;
+        z-index: 1000;
+    }
+    
+    #mobile-navbar {
+        font-size: 1.5rem;
+        color: black;
+        background-color: rgb(241,241,241);
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        padding: 0.5rem 1rem;
+        transition: 250ms color ease-in-out, 250ms background-color ease-in-out;
+    }
+    
+    #mobile-navbar #home-icon {
+        color: black;
+        transition: 250ms color ease-in-out, 250ms background-color ease-in-out;
+    }
+    
+    #navbar {
+        position: fixed;
+        bottom: 2.6rem;
+        background-color: rgb(241, 241, 241);
+        overflow: auto;
+        width: 100%;
+        max-height: 90vh;
+        transform: scaleY(0);
+        transform-origin: bottom;
+        transition: 250ms transform ease-in-out 1ms, 250ms background-color ease-in-out;
+    }
+    
+    #nav-toggle:checked ~ #navbar {
+        transform: scaleY(1);
+    }
+
+    #mobile-navbar .fa-circle-chevron-down {
+        transition: 250ms transform ease-in-out;
+    }
+    
+    #nav-toggle:checked ~ #mobile-navbar .fa-circle-chevron-down {
+        transform: rotate(180deg)
+    }
+    
+    #navbar header {
+        font-family: 'Roboto Slab', serif;
+        font-size: 2rem;
+        font-weight: 700;
+        text-align: center;
+        margin: 0 0.5rem;
+        border-bottom: 2px double gray;
+        transition: 150ms color ease-in-out;
+    }
+
+
+    #navbar ul {
+        text-align: center;
+        list-style: none;
+        padding: 0.5rem;
+        margin: 0;
+    }
+    
+    #navbar ul li:first-of-type {
+        padding-bottom: 0.5rem;
+    }
+    
+    #navbar ul li+li {
+        border-top: 2px dashed rgba(172, 172, 172, 0.5);
+        padding: 0.5rem 0;
+    }
+    
+    #navbar ul li, #navbar header {
+        opacity: 0;
+    }
+    
+    #nav-toggle:checked ~ #navbar ul li, #nav-toggle:checked ~ #navbar header {
+        opacity: 1;
+        transition: 0ms opacity ease-in-out 250ms;
+    }
+    
+    #navbar a {
+        font-family: 'Roboto Slab', serif;
+        font-size: 1rem;
+        color: black;
+        text-decoration: none;
+    }
+    #dark-mode-toggle:checked ~ #navigation #mobile-navbar {
+        background-color: black;
+        color: rgb(241, 241, 241);
+    }
+
+    #dark-mode-toggle:checked ~ #navigation #navbar {
+        background-color: black;
+    }
+    
+    #dark-mode-toggle:checked ~ #navigation #mobile-navbar #home-icon, #dark-mode-toggle:checked ~ #navigation #navbar a, #dark-mode-toggle:checked ~ #navigation #navbar header  {
+        color: rgb(241, 241, 241);
+    }    
+}
+
+/*** Navigation bar in landscape mobile devices and portrait mode tablets ***/
+
+@media only screen and (min-width:601px) and (max-width:1023px) {
+
+    html {
+        scroll-padding-top: 5rem
+    } 
+
+    #mobile-navbar, #menu-dark-mode {
+        display: none;
+        position: absolute;
+        z-index: -1000;
+        max-width: 0;
+        max-height: 0;
+    }
+
+    #navigation {
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 1000;
+    }
+
+    #tablet-navbar {
+        font-size: 2.5rem;
+        position: fixed;
+        top: 0;
+        left: 0;
+        margin: 0.5rem;
+        z-index: 1;
+        transform: rotate(-90deg);
+        transition: 250ms transform ease-in-out !important;
+    }
+
+    #nav-toggle:checked ~ #tablet-navbar {
+        transform: rotate(90deg);
+    }
+
+    #navbar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-color: black;
+        overflow: auto;
+        height: 100vh;
+        border-right: 2px solid gray;
+        transform: scaleX(0);
+        transform-origin: left;
+        transition: 250ms transform ease-in-out 1ms, 250ms background-color ease-in-out;
+    }
+
+    #navbar > * {
+        opacity: 0;
+    }
+
+    #nav-toggle:checked ~ #navbar > * {
+        opacity: 1;
+        transition: 0ms opacity ease-in-out 200ms;
+    }
+    
+    #navbar::-webkit-scrollbar {
+        display: none;
+    }
+    
+    #nav-toggle:checked ~ #navbar {
+        transform: scaleX(1);
+    }
+
+    #navbar #home-dark-container {
+        font-size: 2.5rem;
+        width: 100%;
+        text-align: right;
+        padding: 0.5rem;
+    }
+
+    #navbar #home-dark-container #home-icon {
+        position: absolute;
+        left: 0;
+        right: 0;
+        width: min-content;
+        margin: 0 auto;
+    }
+
+    #navbar header {
+        font-family: 'Roboto Slab', serif;
+        text-align: center;
+        font-size: 1.8rem;
+        font-weight: 700;
+        padding: 1.5rem 1rem;
+        border: 2px solid gray;
+        border-left: 0;
+        border-right: none;
+    }
+
+    #navbar ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    #navbar ul li {
+        padding: 1rem 1rem 1rem 2rem;
+        border-top: 2px solid gray;
+    }
+
+    #navbar ul li:first-of-type {
+        border-top: none;
+    }
+
+    #navigation #navbar a, #navigation #tablet-navbar, #navigation #navbar #home-dark-container, #navigation #navbar header {
+        color: rgb(241, 241, 241);
+        text-decoration: none;
+        transition: 250ms color ease-in-out;
+    }
+
+    #dark-mode-toggle:checked ~ #navigation #navbar {
+        background-color: rgb(241,241,241);
+    }
+    #dark-mode-toggle:checked ~ #navigation #navbar a, #dark-mode-toggle:checked ~ #navigation #tablet-navbar, #dark-mode-toggle:checked ~ #navigation #navbar #home-dark-container, #dark-mode-toggle:checked ~ #navigation #navbar header {
+        color: black;
+    }
+    
+}
+
+/*** Navigation bar in landscape tablets and large screens ***/
+
+@media all and (min-width:1024px) {
+    #mobile-navbar, #tablet-navbar, #home-dark-container {
+        display: none;
+        position: absolute;
+        z-index: -1000;
+        max-width: 0;
+        max-height: 0;
+    }
+    
+    .body-wrapper {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+    }
+    .header-main-wrapper {
+        min-width: 0;
+    }
+
+    #navigation {
+        position: sticky;
+        top: 0;
+        flex-shrink: 0;
+        flex-grow: 0;
+    }
+
+    #navbar {
+        font-family: 'Roboto Slab', serif;
+        background-color: black;
+        color: rgb(241, 241, 241);
+        height: 100vh;
+        border-right: 2px solid gray;
+        overflow-y: auto;
+        transition: 250ms color ease-in-out, 250ms background-color ease-in-out;
+    }
+
+    #navbar header {
+        text-align: center;
+        padding: 1.5rem 1rem;
+        font-size: 1.7rem;
+        border-bottom: 2px solid gray;
+    }
+
+    #navbar ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+    }
+
+    #navbar ul li {
+        padding: 0.5rem 0.5rem 0.5rem 1.5rem;
+        border-bottom: 2px solid gray;
+    }
+
+    #navbar ul li a {
+        position: relative;
+        font-size: 1rem;
+        font-family: 'Roboto Slab', serif;
+        color: rgb(241, 241, 241);
+        text-decoration: none;
+        transition: 250ms color ease-in-out;
+    }
+
+    #navbar ul li a::before {
+        content: '';
+        background-color: rgb(241, 241, 241);
+        position: absolute;
+        bottom: -2px;
+        left: 0;
+        width: 50%;
+        height: 3px;
+        transform: scaleX(0);
+        transform-origin: left;
+        transition: 250ms transform ease-in-out;
+    }
+
+    #navbar ul li a:hover::before {
+        transform: scaleX(1);
+        transform-origin: right;
+    }
+
+    #dark-mode-toggle:checked ~ #navigation #navbar ul li a::before {
+        background-color: black;
+    }
+
+    #navbar ul li a::after {
+        content: '';
+        background-color: rgb(241, 241, 241);
+        position: absolute;
+        bottom: -2px;
+        right: 0;
+        width: 50%;
+        height: 3px;
+        transform: scaleX(0);
+        transform-origin: right;
+        transition: 250ms transform ease-in-out;
+    }
+
+    #navbar ul li a:hover::after {
+        transform: scaleX(1);
+        transform-origin: left;
+    }
+
+    #dark-mode-toggle:checked ~ #navigation #navbar ul li a::after {
+        background-color: black;
+    }
+
+    #menu-dark-mode > * {
+        display: inline-block;
+    }
+
+    #menu-dark-mode {
+        font-size: 1.3rem;
+        padding: 0 4rem 0 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    #dark-mode-toggle:checked ~ #navigation #navbar {
+        background-color: rgb(241, 241, 241);
+        color: black;
+    }
+
+    #dark-mode-toggle:checked ~ #navigation #navbar ul li a {
+        color: black;
+    }
+
+
+    
+}
+
+/*** Styling for lanscape mobile devices and tablets ***/
+
+@media only screen and (min-width:601px) {  
+
+    main {
+        margin-bottom: unset;
+    }
+
+    .header-text {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        margin: auto;
+        height: max-content;
+        width: max-content;
+    }
+
+    .header-text span {
+        display: inline-block;
+        font-size: clamp(3rem, 2.5rem + 1vw, 5rem);
+    }
+
+}
+
+
+/*** stlying for landscape tablets and large screens ***/
+
+@media all and (min-width: 1024px) {
+
+    main figure, main iframe {
+        width: 75%;
+    }
+}
+
+
+
+
+
+
+
+/**** Dark mode config ***/
+#dark-mode-toggle:checked ~ .header-main-wrapper header {
+    background-image: url(https://i.postimg.cc/QdBXsm39/pngwing-com.png), url(https://i.postimg.cc/5NZFZhwr/Modern-spot-light-background.jpg);
+    background-size: 60vmin, cover;
+    background-repeat: no-repeat, no-repeat;
+    background-position: bottom, top;
+}
+
+#dark-mode-toggle ~ .header-main-wrapper header {
+    background-image: url(https://i.postimg.cc/QdBXsm39/pngwing-com.png), url(https://static.vecteezy.com/system/resources/previews/002/036/080/original/spot-light-background-gallery-theater-interior-3d-realistic-background-illustration-free-vector.jpg);
+    background-size: 60vmin, cover;
+    background-repeat: no-repeat, no-repeat;
+    background-position: bottom, top;
+}
+
+#dark-mode-toggle:checked ~ .header-main-wrapper header, #dark-mode-toggle:checked ~ .header-main-wrapper main {
+    background-color: rgb(255, 255, 253);
+}
+
+#dark-mode-toggle:checked ~ .header-main-wrapper main p, #dark-mode-toggle:checked ~ .header-main-wrapper main span, #dark-mode-toggle:checked ~ .header-main-wrapper main h1, #dark-mode-toggle:checked ~ .header-main-wrapper main h2, #dark-mode-toggle:checked ~ .header-main-wrapper main h3, #dark-mode-toggle:checked ~ .header-main-wrapper main h4, #dark-mode-toggle:checked ~ .header-main-wrapper main figcaption, #dark-mode-toggle:checked ~ .header-main-wrapper main ul, #dark-mode-toggle:checked ~ .header-main-wrapper main ol, #dark-mode-toggle:checked ~ .header-main-wrapper main a {
+    color: black;
+}
+
+#dark-mode-toggle:checked ~ .header-main-wrapper main .gray-bg {
+    background-color: rgb(211, 211, 211);
+}
+
+#dark-mode-toggle:checked ~ .header-main-wrapper header .header-text {
+    color: black;
+}
+

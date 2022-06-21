@@ -1,0 +1,893 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML for Beginners</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script
+      src="https://kit.fontawesome.com/467adf1df5.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="body-wrapper">
+      <input
+        type="checkbox"
+        name=""
+        id="dark-mode-toggle"
+        style="display: none"
+        checked
+      />
+      <div id="navigation">
+        <input type="checkbox" name="" id="nav-toggle" style="display: none" />
+        <div id="mobile-navbar">
+          <a href="#header" id="home-icon"><i class="fa-solid fa-house"></i></a>
+          <label for="nav-toggle"
+            ><i class="fa-solid fa-circle-chevron-down"></i
+          ></label>
+          <label for="dark-mode-toggle"
+            ><i class="fa-solid fa-circle-half-stroke"></i
+          ></label>
+        </div>
+        <div id="tablet-navbar">
+          <label for="nav-toggle"
+            ><i class="fa-solid fa-circle-chevron-down"></i
+          ></label>
+        </div>
+        <nav id="navbar">
+          <div id="home-dark-container">
+            <a href="#header" id="home-icon"
+              ><i class="fa-solid fa-house"></i
+            ></a>
+            <label for="dark-mode-toggle"
+              ><i class="fa-solid fa-circle-half-stroke"></i
+            ></label>
+          </div>
+          <header>HTML for Beginners</header>
+          <ul>
+            <li><a href="#par1">Introduction</a></li>
+            <li><a href="#par2">What is HTML?</a></li>
+            <li><a href="#par3">HTML Elements</a></li>
+            <li><a href="#par4">Nesting HTML Elements</a></li>
+            <li><a href="#par5">HTML Attributes</a></li>
+            <li><a href="#par6">Common HTML Elements</a></li>
+            <li><a href="#par7">Block-level vs inline HTML elements</a></li>
+            <li><a href="#par8">Make Comments in HTML</a></li>
+            <li><a href="#par9">HTML Entities</a></li>
+            <li><a href="#par10">Emojies in HTML</a></li>
+            <li><a href="#par11">Common Beginner Mistakes</a></li>
+            <li><a href="#par12">Build a Simple Website</a></li>
+            <li><a href="#par13">Conclusion</a></li>
+            <li><a href="#about-me">About Me</a></li>
+          </ul>
+          <div id="menu-dark-mode">
+            <p>Dark Mode</p>
+            <label for="dark-mode-toggle"
+              ><i class="fa-solid fa-circle-half-stroke"></i
+            ></label>
+          </div>
+        </nav>
+      </div>
+      <div class="header-main-wrapper">
+        <header id="header">
+          <h1 class="header-text">
+            <span>HTML Basics</span> <span>for Beginners</span>
+          </h1>
+        </header>
+        <main>
+          <section class="introduction" id="par1">
+            <h2>Introduction</h2>
+            <p>
+              If you want to build a website, the first language that you need
+              to learn is HTML. In this article, we are going to go through the
+              basics of HTML. At the end, we are going to build a basic website
+              using only HTML. Here's a video you can watch if you want to
+              supplement this article:
+            </p>
+            <iframe
+              src="https://www.youtube.com/embed/pMJ0NI3OkYA"
+              title="Learn HTML basics for Beginner 2021 in 15 minutes | HTML Tutorial"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+          </section>
+          <section class="what-is-html" id="par2">
+            <h2>What Is HTML?</h2>
+            <p>
+              HTML, which stands for Hypertext Markup Language, is a pretty
+              simple language. It consists of different elements which we use to
+              structure a web page.
+            </p>
+            <figure>
+              <img
+                src="https://www.freecodecamp.org/news/content/images/size/w1600/2021/01/Screen-Shot-2021-01-11-at-1.16.17-PM.png"
+                alt="a picture showing a piece of html code"
+              />
+              <figcaption>What is HTML?</figcaption>
+            </figure>
+          </section>
+          <section class="what-are-html-elements" id="par3">
+            <h2>What Are HTML Elements?</h2>
+            <figure>
+              <img
+                src="https://www.freecodecamp.org/news/content/images/size/w1600/2021/01/Screen-Shot-2021-01-11-at-1.16.34-PM.png"
+                alt="an image showing the details of an html element"
+              />
+              <figcaption>What Are HTML Elements?</figcaption>
+            </figure>
+            <p>
+              The element usually starts with an opening tag, which consists of
+              the name of the element. It's wrapped in opening and closing angle
+              brackets. The opening tag indicates where the element begins.
+              Similar to the opening tag, the closing tag is also wrapped in
+              opening and closing angle brackets. But it also includes a forward
+              slash before the element's name. Everything inside the opening and
+              closing tags is the content. But not all elements follow this
+              pattern. We call those that don't empty elements. They only
+              consist of a single tag or an opening tag that cannot have any
+              content. These elements are typically used to insert or embed
+              something in the document. For example, the
+              <span class="gray-bg">&lt;img&gt;</span> element is used to embed
+              an image file, or the <span class="gray-bg">&lt;input&gt;</span>
+              element is used to insert an input onto the page.
+            </p>
+            <span class="markup">
+              <code>
+                <pre>
+&lt;<span class="red-code">img</span> <span class="green-code">src</span>="<span class="blue-code">https://images.unsplash.com/photo-1610447847416-40bac442fbe6</span>" <span class="green-code">width</span>="<span class="blue-code">50</span>"&gt;</pre>
+              </code>
+            </span>
+            <p>
+              In the example above, the
+              <span class="gray-bg">&lt;img&gt;</span> element only consists of
+              one tag that does not have any content. This element is used to
+              insert an image file from
+              <a href="https://unsplash.com/" target="_blank">Unsplash</a> in
+              the document.
+            </p>
+          </section>
+          <section class="how-to-nest-html-elements" id="par4">
+            <h2>How to Nest HTML Elements</h2>
+            <span class="markup">
+              <code>
+                <pre>
+&lt;<span class="red-code">div</span> <span class="green-code">class</span>="<span class="blue-code">my-list</span>"&gt;
+  &lt;<span class="red-code">h4</span>&gt;My list:&lt;/<span class="red-code">h4</span>&gt;
+
+  &lt;<span class="red-code">ul</span>&gt;
+     &lt;<span class="red-code">li</span>&gt;Apple&lt;/<span class="red-code">li</span>&gt;
+     &lt;<span class="red-code">li</span>&gt;Orange&lt;/<span class="red-code">li</span>&gt;
+     &lt;<span class="red-code">li</span>&gt;Banana&lt;/<span class="red-code">li</span>&gt;
+  &lt;/<span class="red-code">ul</span>&gt;
+&lt;/<span class="red-code">div</span>&gt;</pre>
+              </code>
+            </span>
+            <p>
+              Elements can be placed inside other elements. This is called
+              Nesting. In the example above, inside the
+              <span class="gray-bg"> &lt;div&gt;</span> element we have an
+              <span class="gray-bg"> &lt;h4&gt;</span>
+              element and an <span class="gray-bg">&lt;ul&gt;</span> or
+              unordered list element. And Similarly inside the
+              <span class="gray-bg">&lt;ul&gt;</span> element, there are 3
+              <span class="gray-bg">&lt;li&gt;</span> or list item elements.
+              Basic nesting is quite straight-forward to understand. But when
+              the page gets larger, nesting can become complicated. Therefore,
+              before working with HTML, think about the layout structure you
+              would like to have. You can draw it out on a piece of paper or in
+              your mind. It will help a lot.
+            </p>
+            <figure>
+              <img
+                src="https://www.freecodecamp.org/news/content/images/size/w1600/2021/01/Screen-Shot-2021-01-12-at-10.45.05-AM.png"
+                alt="an image showing how nested elements appear in the browser"
+              />
+            </figure>
+          </section>
+          <section class="what-are-html-attributes" id="par5">
+            <h2>What are HTML Attributes?</h2>
+            <p>
+              Elements also have attributes, which contain extra information
+              about the element that will not appear in the content.
+            </p>
+            <span class="markup">
+              <code>
+                <pre>
+&lt;<span class="red-code">img</span> <span class="green-code">src</span>="<span class="blue-code">https://images.unsplash.com/photo</span>" <span class="green-code">width</span>="<span class="blue-code">50</span>"&gt;</pre>
+              </code>
+            </span>
+            <p>
+              In the example above, the
+              <span class="gray-bg">&lt;img&gt;</span> element has 2 attributes:
+              <span class="gray-bg">src</span> or source to specify the path of
+              the image, and <span class="gray-bg">width</span> to specify the
+              width of the image in pixels.
+            </p>
+            <figure>
+              <img
+                src="https://www.freecodecamp.org/news/content/images/size/w1600/2021/01/Screen-Shot-2021-01-12-at-10.45.17-AM.png"
+                alt="an image showing different types of attributes"
+              />
+            </figure>
+            <p>
+              With this example, you can see the following characteristics of
+              attributes:
+            </p>
+            <ul>
+              <li>There is a space between attributes and the element name</li>
+              <li>Attributes are added in the opening tag</li>
+              <li>Elements can have many attributes</li>
+              <li>Attributes usually have a name and a value: name=“value”</li>
+            </ul>
+            <p>
+              But not every attribute has the same pattern. Some can exist
+              without values, and we call them Boolean Attributes.
+            </p>
+            <span class="markup">
+              <code>
+                <pre>
+&lt;<span class="red-code">button</span> onclick=“alert('Submit')" disabled&gt;Button&lt;/<span class="red-code">button</span>&gt;</pre>
+              </code>
+            </span>
+            <p>
+              In this example, if we want to disable the button, all we have to
+              do is pass a <span class="gray-bg">disabled</span> attribute
+              without any values. This means that the presence of the attribute
+              represents the true value, otherwise, the absence represents the
+              false value.
+            </p>
+          </section>
+          <section class="common-html-elements" id="par6">
+            <h2>Common HTML elements</h2>
+            <p>
+              There are in total more than 100 elements. But 90% of the time you
+              will only use around 20 of the most common. I have put them into 5
+              groups:
+            </p>
+            <article>
+              <h3>Section elements</h3>
+              <span class="markup">
+                <code>
+                  <pre>
+&lt;<span class="red-code">div</span>&gt;, &lt;<span class="red-code">span</span>&gt;, &lt;<span class="red-code">header</span>&gt;, &lt;<span class="red-code">footer</span>&gt;, &lt;<span class="red-code">nav</span>&gt;, &lt;<span class="red-code">main</span>&gt;, &lt;<span class="red-code">section</span>&gt;</pre>
+                </code>
+              </span>
+              <p>
+                These elements are used to organize the content into different
+                sections. They are usually self-explanatory, for example,
+                <span class="gray-bg">&lt;header&gt;</span> usually represents a
+                group of the introduction and navigation section,
+                <span class="gray-bg">&lt;nav&gt;</span> represents the section
+                that contains navigation links, and so on.
+              </p>
+            </article>
+            <article>
+              <h3>Text content</h3>
+              <span class="markup">
+                <code>
+                  <pre>
+&lt;<span class="red-code">h1</span>&gt; to &lt;<span class="red-code">h6</span>&gt;, &lt;<span class="red-code">p</span>&gt;, &lt;<span class="red-code">div</span>&gt;, &lt;<span class="red-code">span</span>&gt;, &lt;<span class="red-code">ul</span>&gt;, &lt;<span class="red-code">ol</span>&gt;, &lt;<span class="red-code">li</span>&gt;</pre>
+                </code>
+              </span>
+              <p>
+                These elements are used to organize content or text blocks. They
+                are important to accessibility and SEO. They tell the browser
+                the purpose or structure of the content.
+              </p>
+            </article>
+            <article>
+              <h3>Forms</h3>
+              <span class="markup">
+                <code>
+                  <pre>
+&lt;<span class="red-code">form</span>&gt;, &lt;<span class="red-code">input</span>&gt;, &lt;<span class="red-code">button</span>&gt;, &lt;<span class="red-code">label</span>&gt;, &lt;<span class="red-code">textarea</span>&gt;</pre>
+                </code>
+              </span>
+              <p>
+                These elements can be used together to create forms that users
+                can fill out and submit. Forms might be the trickiest part of
+                HTML.
+              </p>
+            </article>
+            <article>
+              <h3>Images and Links</h3>
+              <span class="markup">
+                <code>
+                  <pre>
+&lt;<span class="red-code">img</span>&gt;, &lt;<span class="red-code">a</span>&gt;</pre>
+                </code>
+              </span>
+              <p>
+                These elements are used to insert an image or create a
+                hyperlink.
+              </p>
+            </article>
+            <article>
+              <h3>Others</h3>
+              <span class="markup">
+                <code>
+                  <pre>
+&lt;<span class="red-code">br</span>&gt;, &lt;<span class="red-code">hr</span>&gt;</pre>
+                </code>
+              </span>
+              <p>
+                These elements are used to add a break to the webpage. You can
+                find all the elements on
+                <a
+                  href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element"
+                  target="_blank"
+                  >developer.mozilla.org.</a
+                >
+                But for beginners, you just need to know the most common ones.
+              </p>
+            </article>
+          </section>
+          <section class="block-level-vs-inline-html-elements" id="par7">
+            <h2>Block-level vs inline HTML elements</h2>
+            <p>
+              By default, an element can be either block-level or an inline
+              element.
+            </p>
+            <p>
+              Block-level elements are the elements that always start on a new
+              line and take up the full width available.
+            </p>
+            <p>
+              Inline elements are the elements that do not start on a new line
+              and it only take up as much width as necessary.
+            </p>
+            <figure>
+              <img
+                src="https://www.freecodecamp.org/news/content/images/size/w1600/2021/01/Screen-Shot-2021-01-11-at-1.17.22-PM.png"
+                alt="an image comparing block-level vs inline elements"
+              />
+              <figcaption>Block level vs. Inline HTML elements</figcaption>
+            </figure>
+            <p>
+              Two elements that represent block-level and inline elements,
+              respectively, are
+              <span class="gray-bg">&lt;div&gt;</span> and<span class="gray-bg"
+                >&lt;span&gt;</span
+              >. In this example, you can see that the<span class="gray-bg"
+                >&lt;div&gt;</span
+              >
+              elements takes 3 lines, whereas the
+              <span class="gray-bg">&lt;span&gt;</span> element only takes up 1
+              line.
+            </p>
+            <p>
+              But the question is: how do we know which ones are block-level
+              elements and which ones are inline elements? Well, unfortunately
+              you need to remember them. The easiest way is to remember which
+              are inline elements – and the rest are block elements.
+            </p>
+            <p>
+              If we look back at the most common HTML elements, inline elements
+              include:
+              <span class="gray-bg"
+                >&lt;span&gt;, &lt;input&gt;, &lt;button&gt;, &lt;label&gt;,
+                &lt;textarea&gt;, &lt;img&gt;, &lt;a&gt;, &lt;br&gt;, </span
+              >.
+            </p>
+          </section>
+          <section class="how-to-comment-in-html" id="par8">
+            <h2>How to comment in HTML</h2>
+            <span class="markup">
+              <code>
+                <pre>
+&lt;<span class="red-code">p</span>&gt;This is a paragraph.&lt;/<span class="red-code">p</span>&gt;
+
+<span class="grayed-out-code">&lt;!-- &lt;p&gt;I am not showing.&lt;/p&gt; --&gt;</span></pre>
+              </code>
+            </span>
+            <p>
+              The purpose of comments is to include notes in the code to explain
+              your logic or simply to organize your code.
+            </p>
+            <p>
+              HTML comments are wrapped in the special markers:
+              <span class="gray-bg">&lt;!-- and --&gt;</span> and they are
+              ignored in the browser.
+            </p>
+          </section>
+          <section class="how-to-use-html-entities" id="par9">
+            <h2>How to use HTML entities</h2>
+            <p>
+              What if you want to show the text:
+              <span class="gray-bg"
+                >the &lt;p&gt; tag defines a paragraph.</span
+              >
+              , but the browser interprets
+              <span class="gray-bg">&lt;p&gt;</span> as an opening tag for a new
+              element? In this case, we can use HTML entities like in the
+              following example:
+            </p>
+            <span class="markup">
+              <code>
+                <pre>
+&lt;<span class="red-code">p</span>&gt;the  &lt;<span class="red-code">p</span>&gt; tag defines a paragraph. &lt;/<span class="red-code">p</span>&gt;
+
+&lt;<span class="red-code">p</span>&gt;the <span class="orange-code">&amp;lt;</span>p<span class="orange-code">&amp;gt;</span> define a paragraph. &lt;/<span class="red-code">p</span>&gt;</pre>
+              </code>
+            </span>
+          </section>
+          <section class="how-to-use-emojies-in-html" id="par10">
+            <h2>How to use emoji in HTML</h2>
+            <p>
+              In the modern web, we can display emoji in HTML pretty easily,
+              like this: 👻
+            </p>
+            <span class="markup">
+              <code>
+                <pre>
+&lt;<span class="red-code">p</span>&gt;😀 Grinning Face. &lt;/<span class="red-code">p</span>&gt;
+
+&lt;<span class="red-code">p</span>&gt;🎂 Birthday &lt;/<span class="red-code">p</span>&gt;</pre>
+              </code>
+            </span>
+          </section>
+          <section class="common-beginner-mistakes-in-html" id="par11">
+            <h2>Common beginner mistakes in HTML</h2>
+            <article>
+              <h3>1. Tags/Element names</h3>
+              <p>
+                Tags/Element names are cAse-inSensitive. This means that they
+                can be written in lowercase or uppercase, but it is recommended
+                that you write everything in lowercase: &lt;button&gt; not
+                &lt;ButTon&gt;.
+              </p>
+            </article>
+            <article>
+              <h3>2. Closing tag</h3>
+              <p>
+                Failing to include a closing tag is a common beginner error.
+                Therefore, whenever you create an opening tag, immediately put
+                in a closing tag.
+              </p>
+            </article>
+            <article>
+              <h3>3. Nesting</h3>
+              <p>This is wrong:</p>
+              <span class="markup">
+                <code>
+                  <pre>
+&lt;<span class="red-code">div</span>&gt;Div 1 &lt;<span class="red-code">span</span>&gt; Span 2 &lt;/<span class="red-code">div</span>&gt; &lt;/<span class="red-code">span</span>&gt;</pre>
+                </code>
+              </span>
+              <p>
+                The tags have to open and close in a way that they are inside or
+                outside one another.
+              </p>
+            </article>
+            <article>
+              <h3>4. Single quotes and Double quotes</h3>
+              <p>This is wrong:</p>
+              <span class="markup">
+                <code>
+                  <pre>
+&lt;<span class="red-code">img</span> <span class="green-code">src</span>="<span class="blue-code">https://images.unsplash.com/</span>'&gt;</pre>
+                </code>
+              </span>
+              <p>
+                You cannot mix single quotes and double-quotes. You should
+                always use double quotes and use HTML entities if needed.
+              </p>
+            </article>
+          </section>
+          <section class="how-to-build-a-simple-website-with-html" id="par12">
+            <h2>How to build a simple website with HTML</h2>
+            <p>
+              Individual HTML elements are not enough to create a website. So
+              let's see what more we need to build a simple website from
+              scratch.
+            </p>
+            <article>
+              <h3>How to create an HTML document</h3>
+              <p>
+                First, let's open
+                <a href="https://code.visualstudio.com/" target="_blank"
+                  >Visual Studio Code</a
+                >
+                (or your favorite code editor). In the folder of your choice,
+                create a new file and name it index.html.
+              </p>
+              <p>
+                In the index.html file, type ! (exclamation mark) and press
+                enter. You will see something like this:
+              </p>
+              <span class="markup">
+                <code>
+                  <pre>
+<span class="grayed-out-code">&lt;!DOCTYPE html&gt;</span>
+&lt;<span class="red-code">html</span> <span class="green-code">lang</span>="<span class="blue-code">en</span>"&gt;
+&lt;<span class="red-code">head</span>&gt;
+    &lt;<span class="red-code">meta</span> <span class="green-code">charset</span>="<span class="blue-code">UTF-8</span>"&gt;
+    &lt;<span class="red-code">meta</span> <span class="green-code">name</span>="<span class="blue-code">viewport</span>" <span class="green-code">content</span>="<span class="blue-code">width=device-width, initial-scale=1.0</span>"&gt;
+    &lt;<span class="red-code">title</span>&gt;Document&lt;/<span class="red-code">title</span>&gt;
+&lt;/<span class="red-code">head</span>&gt;
+&lt;<span class="red-code">body</span>&gt;
+    
+&lt;/<span class="red-code">body</span>&gt;
+&lt;/<span class="red-code">html</span>&gt;</pre>
+                </code>
+              </span>
+              <p>
+                This is the minimal code that an HTML document should have to
+                make up a website. And here we have:
+              </p>
+              <ol>
+                <li>
+                  <span class="gray-bg">&lt;!DOCTYPE html&gt;</span>: First we
+                  have Doctype. For some weird historical reason in HTML we have
+                  to include the doctype for everything to work correctly.
+                </li>
+
+                <li>
+                  <span class="gray-bg"
+                    >&lt;html lang="en"&gt;&lt;/html&gt;</span
+                  >: The <span class="gray-bg">&lt;html&gt;</span> element wraps
+                  all the content on the page, also known as the root element.
+                  And we should always include the
+                  <span class="gray-bg">lang</span> attribute to declare the
+                  language of the page.
+                </li>
+
+                <li>
+                  <span class="gray-bg">&lt;head&gt;&lt;/head&gt;</span>: The
+                  <span class="gray-bg">&lt;head&gt;</span> element is a
+                  container for everything you want to include, but not content
+                  that you show to your users.
+                </li>
+
+                <li>
+                  <span class="gray-bg">&lt;meta charset="UTF-8" /&gt;</span>:
+                  The first meta element is used to set the character set to be
+                  UTF-8, which includes most characters from written languages.
+                </li>
+
+                <li>
+                  <span class="gray-bg"
+                    >&lt;meta name="viewport" content="width=device-width,
+                    initial-scale=1.0" /&gt;</span
+                  >: The second meta element specifies the browser viewport.
+                  This setting is for a mobile-optimized site.
+                </li>
+
+                <li>
+                  <span class="gray-bg"
+                    >&lt;title&gt;Document&lt;/title&gt;</span
+                  >: This is the &lt;title&gt; element. It sets the title of the
+                  page.
+                </li>
+
+                <li>
+                  <span class="gray-bg">&lt;body&gt;&lt;/body&gt;</span>: The
+                  <span class="gray-bg">&lt;body&gt;&lt;</span> element contains
+                  all the content on the page.
+                </li>
+              </ol>
+            </article>
+            <article>
+              <h3>How to build a pancake recipe page</h3>
+              <p>
+                Alright, now that we have the starter code, let's build a
+                pancake recipe page. We are going to use the content from this
+                <a
+                  href="https://www.allrecipes.com/recipe/21014/good-old-fashioned-pancakes/"
+                  target="_blank"
+                  >AllRecipes Page</a
+                >.
+              </p>
+              <p>
+                First, let's give the
+                <span class="gray-bg">&lt;title&gt;</span> element content of
+                the pancakes recipe. You will see the text on the web page tab
+                change. In the
+                <span class="gray-bg">&lt;body&gt;</span> element, let's create
+                3 elements: <span class="gray-bg">&lt;header&gt;</span> ,
+                <span class="gray-bg">&lt;main&gt;</span> and
+                <span class="gray-bg">&lt;footer&gt;</span> representing 3
+                sections.
+              </p>
+
+              <h4>1. Build the header section</h4>
+              <p>
+                In the header, we want to have the logo and the navigation.
+                Therefore, let's create a <span class="gray-bg">div</span> with
+                the content <span class="gray-bg">ALL RECIPE</span> for the
+                logo.
+              </p>
+
+              <p>
+                For the navigation, let's use the
+                <span class="gray-bg">&lt;nav&gt;</span> element. Within the
+                <span class="gray-bg">&lt;nav&gt;</span> element, we can use
+                <span class="gray-bg">&lt;ul&gt;</span> to create an unordered
+                list. We want to have 3
+                <span class="gray-bg">&lt;li&gt;</span> elements for 3 links:
+                Ingredients, Steps, and Subscribe. The header code looks like
+                this:
+              </p>
+              <span class="markup">
+                <code>
+                  <pre>
+...
+    &lt;<span class="red-code">header</span>&gt;
+      &lt;<span class="red-code">div</span>&gt;ALL RECIPE&lt;/<span class="red-code">div</span>&gt;
+      &lt;<span class="red-code">nav</span>&gt;
+        &lt;<span class="red-code">ul</span>&gt;
+          &lt;<span class="red-code">li</span>&gt;&lt;<span class="red-code">a</span> <span class="green-code">href</span>="<span class="blue-code">#ingredients</span>"&gt;Ingredients&lt;/<span class="red-code">a</span>&gt;&lt;/<span class="red-code">li</span>&gt;
+          &lt;<span class="red-code">li</span>&gt;&lt;<span class="red-code">a</span> <span class="green-code">href</span>="<span class="blue-code">#steps</span>"&gt;Steps&lt;/<span class="red-code">a</span>&gt;&lt;/<span class="red-code">li</span>&gt;
+          &lt;<span class="red-code">li</span>&gt;&lt;<span class="red-code">a</span> <span class="green-code">href</span>="<span class="blue-code">#subsribe</span>"&gt;Subscribe&lt;/<span class="red-code">a</span>&gt;&lt;/<span class="red-code">li</span>&gt;
+        &lt;/<span class="red-code">ul</span>&gt;
+      &lt;/<span class="red-code">nav</span>&gt;
+    &lt;/<span class="red-code">header</span>&gt;
+...</pre>
+                </code>
+              </span>
+              <h4>2. Build the Main Section</h4>
+              <p>
+                In the main section, first, we want to have a title and an
+                image. We can use <span class="gray-bg">h1</span> for the title
+                and <span class="gray-bg">&lt;img&gt;</span> for the image (we
+                can use an image from
+                <a href="https://images.unsplash.com/" target="_blank"
+                  >Unsplash</a
+                >
+                for free):
+              </p>
+              <span class="markup">
+                <code>
+                  <pre>
+...
+    &lt;<span class="red-code">main</span>&gt;
+      &lt;<span class="red-code">h1</span>&gt;Good Old Fashioned Pancakes&lt;/<span class="red-code">h1</span>&gt;
+      &lt;img
+        <span class="green-code">src</span>="<span class="blue-code">https://images.unsplash.com/photo-1575853121743-60c24f0a7502</span>"
+        <span class="green-code">alt</span>="<span class="blue-code">pancake</span>"
+        <span class="green-code">width</span>="<span class="blue-code">250</span>"
+      /&gt;
+    &lt;/<span class="red-code">main</span>&gt;
+...</pre>
+                </code>
+              </span>
+              <p>
+                Next, we want to list all the ingredients. We can use
+                <span class="gray-bg">&lt;ol&gt;</span> to create an ordered
+                list and<span class="gray-bg"
+                  >&lt;input type="checkbox" /&gt;</span
+                >
+                to create a checkbox.
+              </p>
+
+              <p>
+                But before that, we can use
+                <span class="gray-bg"
+                  >&lt;<span class="red-code">h2</span>&gt;</span
+                >
+                to start a new content block. We also want to add the
+                <span class="gray-bg">id</span> attribute for
+                <span class="gray-bg">&lt;h2&gt;</span> so that the link in the
+                navigation knows where to go:
+              </p>
+
+              <span class="markup">
+                <code>
+                  <pre>
+...
+    &lt;<span class="red-code">main</span>&gt;
+    ...
+      &lt;<span class="red-code">h2</span> <span class="green-code">id</span>="<span class="blue-code">ingredients</span>"&gt;Ingredients&lt;/<span class="red-code">h2</span>&gt;
+      &lt;<span class="red-code">ol</span>&gt;
+        &lt;<span class="red-code">li</span>&gt;&lt;<span class="red-code">input</span> <span class="green-code">type</span>="<span class="blue-code">checkbox</span>" /&gt; 1 ½ cups all-purpose flour&lt;/<span class="red-code">li</span>&gt;
+        &lt;<span class="red-code">li</span>&gt;&lt;<span class="red-code">input</span> <span class="green-code">type</span>="<span class="blue-code">checkbox</span>" /&gt; 3 ½ teaspoons baking powder&lt;/<span class="red-code">li</span>&gt;
+        &lt;<span class="red-code">li</span>&gt;&lt;<span class="red-code">input</span> <span class="green-code">type</span>="<span class="blue-code">checkbox</span>" /&gt; 1 teaspoon salt&lt;/<span class="red-code">li</span>&gt;
+        &lt;<span class="red-code">li</span>&gt;&lt;<span class="red-code">input</span> <span class="green-code">type</span>="<span class="blue-code">checkbox</span>" /&gt; 1 tablespoon white sugar&lt;/<span class="red-code">li</span>&gt;
+        &lt;<span class="red-code">li</span>&gt;&lt;<span class="red-code">input</span> <span class="green-code">type</span>="<span class="blue-code">checkbox</span>" /&gt; 1 ¼ cups milk&lt;/<span class="red-code">li</span>&gt;
+        &lt;<span class="red-code">li</span>&gt;&lt;<span class="red-code">input</span> <span class="green-code">type</span>="<span class="blue-code">checkbox</span>" /&gt; 1 egg&lt;/<span class="red-code">li</span>&gt;
+      &lt;/<span class="red-code">ol</span>&gt;
+    &lt;/<span class="red-code">main</span>&gt;
+...</pre>
+                </code>
+              </span>
+              <p>
+                After the ingredients, we want to list all the steps. We can use
+                <span class="gray-bg">&lt;h4&gt;</span> for the step heading and
+                <span class="gray-bg">&lt;p&gt;</span> for the step content:
+              </p>
+              <span class="markup">
+                <code>
+                  <pre>
+...
+    &lt;<span class="red-code">main</span>&gt;
+    ...
+      &lt;<span class="red-code">h2</span> <span class="green-code">id</span>="<span class="blue-code">steps</span>"&gt;Steps&lt;/<span class="red-code">h2</span>&gt;
+      
+      &lt;<span class="red-code">h4</span>&gt;Step 1&lt;/<span class="red-code">h4</span>&gt;
+      &lt;<span class="red-code">p</span>&gt;
+        In a large bowl, sift together the flour, baking powder, salt and sugar.
+        Make a well in the center and pour in the milk, egg and melted butter;
+        mix until smooth.
+      &lt;/<span class="red-code">p</span>&gt;
+      
+      &lt;<span class="red-code">h4</span>&gt;Step 2&lt;/<span class="red-code">h4</span>&gt;
+      &lt;<span class="red-code">p</span>&gt;
+        Heat a lightly oiled griddle or frying pan over medium-high heat. Pour
+        or scoop the batter onto the griddle, using approximately 1/4 cup for
+        each pancake. Brown on both sides and serve hot.
+      &lt;/<span class="red-code">p</span>&gt;
+    &lt;/<span class="red-code">main</span>&gt;
+...</pre>
+                </code>
+              </span>
+              <p>
+                Alright, now that we are done with the main section, let's move
+                on to the footer section.
+              </p>
+              <h4>3. Build the Footer Section</h4>
+              <p>
+                In the footer, we want to have a subscribe form and copyright
+                text.
+              </p>
+
+              <p>
+                For the subscribe form, we can use the
+                <span class="gray-bg">&lt;form&gt;</span> element. Inside it, we
+                can have an<span class="gray-bg"
+                  >&lt;input type="text"&gt;</span
+                >
+                for text input and a
+                <span class="gray-bg">&lt;button&gt;</span> for the submit
+                button.
+              </p>
+
+              <p>
+                For the copyright text, we can simply use a
+                <span class="gray-bg">&lt;div&gt;</span>. Notice here, we can
+                use the HTML entity <span class="gray-bg">$copy;</span> for the
+                copyright symbol.
+              </p>
+
+              <p>
+                We can add <span class="gray-bg">&lt;br&gt;</span> to add some
+                space between the subscribe form and the copyright text:
+              </p>
+
+              <span class="markup">
+                <code>
+                  <pre>
+...
+    &lt;<span class="red-code">footer</span>&gt;
+      &lt;<span class="red-code">h6</span> <span class="green-code">id</span>="<span class="blue-code">subscribe</span>"&gt;Subscribe&lt;/<span class="red-code">h6</span>&gt;
+      &lt;<span class="red-code">form</span> <span class="green-code">onsubmit</span>="<span class="blue-code">alert('Subscribed')</span>"&gt;
+        &lt;<span class="red-code">input</span> <span class="green-code">type</span>="text" <span class="green-code">placeholder</span>="<span class="blue-code">Enter Email Address</span>" /&gt;
+        &lt;<span class="red-code">button</span>&gt;Submit&lt;/<span class="red-code">button</span>&gt;
+      &lt;/<span class="red-code">form</span>&gt;
+      &lt;<span class="red-code">br</span> /&gt;
+      &lt;<span class="red-code">div</span>&gt;<span class="orange-code">&amp;copy;</span> dakota kelly at Allrecipe.com&lt;/<span class="red-code">div</span>&gt;
+    &lt;/<span class="red-code">footer</span>&gt;
+...</pre>
+                </code>
+              </span>
+              <p>
+                Alright now we are done! Here is the full code for reference:
+              </p>
+              <span class="markup">
+                <code>
+                  <pre>
+&lt;!DOCTYPE html&gt;
+&lt;<span class="red-code">html</span> <span class="green-code">lang</span>="<span class="blue-code">en</span>"&gt;
+  &lt;<span class="red-code">head</span>&gt;
+    &lt;<span class="red-code">meta</span> <span class="green-code">charset</span>="<span class="blue-code">UTF-8</span>" /&gt;
+    &lt;<span class="red-code">meta</span> <span class="green-code">name</span>="<span class="blue-code">viewport</span>" <span class="green-code">content</span>="<span class="blue-code">width=device-width, initial-scale=1.0</span>" /&gt;
+    &lt;<span class="red-code">title</span>&gt;Pancake Recipe&lt;/<span class="red-code">title</span>&gt;
+  &lt;/<span class="red-code">head</span>&gt;
+  &lt;<span class="red-code">body</span>&gt;
+    &lt;<span class="red-code">header</span>&gt;
+      &lt;<span class="red-code">div</span>&gt;ALL RECIPE&lt;/<span class="red-code">div</span>&gt;
+      &lt;<span class="red-code">nav</span>&gt;
+        &lt;<span class="red-code">ul</span>&gt;
+          &lt;<span class="red-code">li</span>&gt;&lt;<span class="red-code">a</span> <span class="green-code">href</span>="<span class="blue-code">#ingredients</span>"&gt;Ingredients&lt;/<span class="red-code">a</span>&gt;&lt;/<span class="red-code">li</span>&gt;
+          &lt;<span class="red-code">li</span>&gt;&lt;<span class="red-code">a</span> <span class="green-code">href</span>="<span class="blue-code">#steps</span>"&gt;Steps&lt;/<span class="red-code">a</span>&gt;&lt;/<span class="red-code">li</span>&gt;
+          &lt;<span class="red-code">li</span>&gt;&lt;<span class="red-code">a</span> <span class="green-code">href</span>="<span class="blue-code">#subsribe</span>"&gt;Subscribe&lt;/<span class="red-code">a</span>&gt;&lt;/<span class="red-code">li</span>&gt;
+        &lt;/<span class="red-code">ul</span>&gt;
+      &lt;/<span class="red-code">nav</span>&gt;
+    &lt;/<span class="red-code">header</span>&gt;
+    &lt;<span class="red-code">main</span>&gt;
+      &lt;<span class="red-code">h1</span>&gt;Good Old Fashioned Pancakes&lt;/<span class="red-code">h1</span>&gt;
+      &lt;<span class="red-code">img</span>
+        <span class="green-code">src</span>="<span class="blue-code">https://images.unsplash.com/photo-1575853121743-60c24f0a7502?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MXx8cGFuY2FrZXxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=60</span>"
+        <span class="green-code">alt</span>="<span class="blue-code">pancake</span>"
+        <span class="green-code">width</span>="<span class="blue-code">250</span>"
+      /&gt;
+      &lt;<span class="red-code">h2</span>  <span class="green-code">id</span>="<span class="blue-code">ingredients</span>"&gt;Ingredients&lt;/<span class="red-code">h2</span>&gt;
+      &lt;<span class="red-code">ol</span>&gt;
+        &lt;<span class="red-code">li</span>&gt;&lt;<span class="red-code">input</span> <span class="green-code">type</span>="<span class="blue-code">checkbox</span>" /&gt; 1 ½ cups all-purpose flour&lt;/<span class="red-code">li</span>&gt;
+        &lt;<span class="red-code">li</span>&gt;&lt;<span class="red-code">input</span> <span class="green-code">type</span>="<span class="blue-code">checkbox</span>" /&gt; 3 ½ teaspoons baking powder&lt;/<span class="red-code">li</span>&gt;
+        &lt;<span class="red-code">li</span>&gt;&lt;<span class="red-code">input</span> <span class="green-code">type</span>="<span class="blue-code">checkbox</span>" /&gt; 1 teaspoon salt&lt;/<span class="red-code">li</span>&gt;
+        &lt;<span class="red-code">li</span>&gt;&lt;<span class="red-code">input</span> <span class="green-code">type</span>="<span class="blue-code">checkbox</span>" /&gt; 1 tablespoon white sugar&lt;/<span class="red-code">li</span>&gt;
+        &lt;<span class="red-code">li</span>&gt;&lt;<span class="red-code">input</span> <span class="green-code">type</span>="<span class="blue-code">checkbox</span>" /&gt; 1 ¼ cups milk&lt;/<span class="red-code">li</span>&gt;
+        &lt;<span class="red-code">li</span>&gt;&lt;<span class="red-code">input</span> <span class="green-code">type</span>="<span class="blue-code">checkbox</span>" /&gt; 1 egg&lt;/<span class="red-code">li</span>&gt;
+      &lt;/<span class="red-code">ol</span>&gt;
+      &lt;<span class="red-code">h2</span> <span class="green-code">id</span>="<span class="blue-code">steps</span>"&gt;Steps&lt;/<span class="red-code">h2</span>&gt;
+      &lt;<span class="red-code">h4</span>&gt;Step 1&lt;/<span class="red-code">h4</span>&gt;
+      &lt;<span class="red-code">p</span>&gt;
+        In a large bowl, sift together the flour, baking powder, salt and sugar.
+        Make a well in the center and pour in the milk, egg and melted butter;
+        mix until smooth.
+      &lt;/<span class="red-code">p</span>&gt;
+      &lt;<span class="red-code">h4</span>&gt;Step 2&lt;/<span class="red-code">h4</span>&gt;
+      &lt;<span class="red-code">p</span>&gt;
+        Heat a lightly oiled griddle or frying pan over medium-high heat. Pour
+        or scoop the batter onto the griddle, using approximately 1/4 cup for
+        each pancake. Brown on both sides and serve hot.
+      &lt;/<span class="red-code">p</span>&gt;
+    &lt;/<span class="red-code">main</span>&gt;
+    &lt;<span class="red-code">hr</span> /&gt;
+    &lt;<span class="red-code">footer</span>&gt;
+      &lt;<span class="red-code">h6</span> <span class="green-code">id</span>="<span class="blue-code">subscribe</span>"&gt;Subscribe&lt;/<span class="red-code">h6</span>&gt;
+      &lt;<span class="red-code">form</span> <span class="green-code">onsubmit</span>="<span class="blue-code">alert('Subscribed')</span>"&gt;
+        &lt;<span class="red-code">input</span> <span class="green-code">type</span>="<span class="blue-code">text</span>" <span class="green-code">placeholder</span>="<span class="blue-code">Enter Email Address</span>" /&gt;
+        &lt;<span class="red-code">button</span>&gt;Submit&lt;/<span class="red-code">button</span>&gt;
+      &lt;/<span class="red-code">form</span>&gt;
+      &lt;<span class="red-code">br</span> /&gt;
+      &lt;<span class="red-code">div</span>&gt;<span class="orange-code">&amp;copy</span>; dakota kelly at Allrecipe.com&lt;/<span class="red-code">div</span>&gt;
+    &lt;/<span class="red-code">footer</span>&gt;
+  &lt;/<span class="red-code">body</span>&gt;
+&lt;/<span class="red-code">html</span>&gt;</pre>
+                </code>
+              </span>
+            </article>
+          </section>
+          <section class="conclusion" id="par13">
+            <h2>Conclusion</h2>
+            <p>
+              You can build a simple website with just HTML. But to be able to
+              build beautiful and functional websites, you need to study CSS and
+              JavaScript.
+            </p>
+
+            <p>
+              You can also check out the
+              <a href="https://www.freecodecamp.org/learn" target="_blank"
+                >freeCodeCamp Curriculum</a
+              >
+              to practice HTML by solving small tasks.
+            </p>
+
+            <p>Otherwise, stay happy coding and see you in future posts 👋.</p>
+          </section>
+          <section class="about-me" id="about-me">
+            <h2>About me</h2>
+            <p>Hello, stranger!</p>
+            <p>
+              I'm Philip, a coding enthusiast working toward becoming a
+              professional developer.
+            </p>
+            <p>
+              You can read the original article at
+              <a
+                href="https://www.freecodecamp.org/news/html-basics-for-beginners/"
+                target="_blank"
+                >freeCodeCamp</a
+              >
+              by
+              <a href="https://www.freecodecamp.org/news/author/thu/"
+                >Thu Nghiem</a
+              >.
+            </p>
+          </section>
+        </main>
+      </div>
+    </div>
+  </body>
+</html>
