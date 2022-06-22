@@ -74,17 +74,22 @@ main {
     transition: 250ms background-color ease-in-out;
 }
 
-main h2 {
+main header {
     font-size: 2rem;
+    font-weight: 700;
     color: white;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
 }
 
 main h3 {
     font-size: 1.7rem;
+    font-weight: 500;
 }
 
 main h4 {
     font-size: 1.5rem;
+    font-weight: 500;
 }
 
 main p {
@@ -525,11 +530,7 @@ iframe {
         background-color: black;
     }
 
-    #menu-dark-mode > * {
-        display: inline-block;
-    }
-
-    #menu-dark-mode {
+    #menu-dark-mode label {
         font-size: 1.3rem;
         padding: 0 4rem 0 1rem;
         display: flex;
@@ -593,33 +594,29 @@ iframe {
 
 
 /**** Dark mode config ***/
-#dark-mode-toggle:checked ~ .header-main-wrapper header {
+#dark-mode-toggle:checked ~ .header-main-wrapper header:not(.main-header) {
     background-image: url(https://i.postimg.cc/QdBXsm39/pngwing-com.png), url(https://i.postimg.cc/5NZFZhwr/Modern-spot-light-background.jpg);
     background-size: 60vmin, cover;
     background-repeat: no-repeat, no-repeat;
     background-position: bottom, top;
 }
 
-#dark-mode-toggle ~ .header-main-wrapper header {
+#dark-mode-toggle ~ .header-main-wrapper header:not(.main-header) {
     background-image: url(https://i.postimg.cc/QdBXsm39/pngwing-com.png), url(https://static.vecteezy.com/system/resources/previews/002/036/080/original/spot-light-background-gallery-theater-interior-3d-realistic-background-illustration-free-vector.jpg);
     background-size: 60vmin, cover;
     background-repeat: no-repeat, no-repeat;
     background-position: bottom, top;
 }
 
-#dark-mode-toggle:checked ~ .header-main-wrapper header, #dark-mode-toggle:checked ~ .header-main-wrapper main {
+#dark-mode-toggle:checked ~ .header-main-wrapper main {
     background-color: rgb(255, 255, 253);
 }
 
-#dark-mode-toggle:checked ~ .header-main-wrapper main p, #dark-mode-toggle:checked ~ .header-main-wrapper main span, #dark-mode-toggle:checked ~ .header-main-wrapper main h1, #dark-mode-toggle:checked ~ .header-main-wrapper main h2, #dark-mode-toggle:checked ~ .header-main-wrapper main h3, #dark-mode-toggle:checked ~ .header-main-wrapper main h4, #dark-mode-toggle:checked ~ .header-main-wrapper main figcaption, #dark-mode-toggle:checked ~ .header-main-wrapper main ul, #dark-mode-toggle:checked ~ .header-main-wrapper main ol, #dark-mode-toggle:checked ~ .header-main-wrapper main a {
+#dark-mode-toggle:checked ~ .header-main-wrapper main p, #dark-mode-toggle:checked ~ .header-main-wrapper main span, #dark-mode-toggle:checked ~ .header-main-wrapper main h1, #dark-mode-toggle:checked ~ .header-main-wrapper main header, #dark-mode-toggle:checked ~ .header-main-wrapper main h3, #dark-mode-toggle:checked ~ .header-main-wrapper main h4, #dark-mode-toggle:checked ~ .header-main-wrapper main figcaption, #dark-mode-toggle:checked ~ .header-main-wrapper main ul, #dark-mode-toggle:checked ~ .header-main-wrapper main ol, #dark-mode-toggle:checked ~ .header-main-wrapper main a {
     color: black;
 }
 
 #dark-mode-toggle:checked ~ .header-main-wrapper main .gray-bg {
     background-color: rgb(211, 211, 211);
-}
-
-#dark-mode-toggle:checked ~ .header-main-wrapper header .header-text {
-    color: black;
 }
 
