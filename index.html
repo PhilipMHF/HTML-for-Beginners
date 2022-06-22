@@ -53,25 +53,57 @@
           </div>
           <header>HTML for Beginners</header>
           <ul>
-            <li><a href="#par1">Introduction</a></li>
-            <li><a href="#par2">What is HTML?</a></li>
-            <li><a href="#par3">HTML Elements</a></li>
-            <li><a href="#par4">Nesting HTML Elements</a></li>
-            <li><a href="#par5">HTML Attributes</a></li>
-            <li><a href="#par6">Common HTML Elements</a></li>
-            <li><a href="#par7">Block-level vs inline HTML elements</a></li>
-            <li><a href="#par8">Make Comments in HTML</a></li>
-            <li><a href="#par9">HTML Entities</a></li>
-            <li><a href="#par10">Emojies in HTML</a></li>
-            <li><a href="#par11">Common Beginner Mistakes</a></li>
-            <li><a href="#par12">Build a Simple Website</a></li>
-            <li><a href="#par13">Conclusion</a></li>
-            <li><a href="#about-me">About Me</a></li>
+            <li><a class="nav-link" href="#introduction">Introduction</a></li>
+            <li><a class="nav-link" href="#what_is_html?">What is HTML?</a></li>
+            <li>
+              <a class="nav-link" href="#html_elements">HTML Elements</a>
+            </li>
+            <li>
+              <a class="nav-link" href="#nesting_html_elements"
+                >Nesting HTML Elements</a
+              >
+            </li>
+            <li>
+              <a class="nav-link" href="#html_attributes">HTML Attributes</a>
+            </li>
+            <li>
+              <a class="nav-link" href="#common_html_elements"
+                >Common HTML Elements</a
+              >
+            </li>
+            <li>
+              <a class="nav-link" href="#block-level_vs_inline_html_elements"
+                >Block-level vs inline HTML elements</a
+              >
+            </li>
+            <li>
+              <a class="nav-link" href="#make_comments_in_html"
+                >Make Comments in HTML</a
+              >
+            </li>
+            <li>
+              <a class="nav-link" href="#html_entities">HTML Entities</a>
+            </li>
+            <li>
+              <a class="nav-link" href="#emojies_in_html">Emojies in HTML</a>
+            </li>
+            <li>
+              <a class="nav-link" href="#common_beginner_mistakes_in_html"
+                >Common Beginner Mistakes in HTML</a
+              >
+            </li>
+            <li>
+              <a class="nav-link" href="#build_a_simple_website_with_html"
+                >Build a Simple Website with HTML</a
+              >
+            </li>
+            <li><a class="nav-link" href="#conclusion">Conclusion</a></li>
+            <li><a class="nav-link" href="#about_me">About Me</a></li>
           </ul>
           <div id="menu-dark-mode">
-            <p>Dark Mode</p>
             <label for="dark-mode-toggle"
-              ><i class="fa-solid fa-circle-half-stroke"></i
+              ><p>Dark Mode</p>
+              <i class="fa-solid fa-circle-half-stroke"></i
             ></label>
           </div>
         </nav>
@@ -82,9 +114,9 @@
             <span>HTML Basics</span> <span>for Beginners</span>
           </h1>
         </header>
-        <main>
-          <section class="introduction" id="par1">
-            <h2>Introduction</h2>
+        <main id="main-doc">
+          <section class="introduction main-section" id="introduction">
+            <header class="main-header">Introduction</header>
             <p>
               If you want to build a website, the first language that you need
               to learn is HTML. In this article, we are going to go through the
@@ -100,8 +132,8 @@
               allowfullscreen
             ></iframe>
           </section>
-          <section class="what-is-html" id="par2">
-            <h2>What Is HTML?</h2>
+          <section class="what-is-html main-section" id="what_is_html?">
+            <header class="main-header">What Is HTML?</header>
             <p>
               HTML, which stands for Hypertext Markup Language, is a pretty
               simple language. It consists of different elements which we use to
@@ -115,8 +147,11 @@
               <figcaption>What is HTML?</figcaption>
             </figure>
           </section>
-          <section class="what-are-html-elements" id="par3">
-            <h2>What Are HTML Elements?</h2>
+          <section
+            class="what-are-html-elements main-section"
+            id="html_elements"
+          >
+            <header class="main-header">HTML Elements</header>
             <figure>
               <img
                 src="https://www.freecodecamp.org/news/content/images/size/w1600/2021/01/Screen-Shot-2021-01-11-at-1.16.34-PM.png"
@@ -155,8 +190,11 @@
               the document.
             </p>
           </section>
-          <section class="how-to-nest-html-elements" id="par4">
-            <h2>How to Nest HTML Elements</h2>
+          <section
+            class="how-to-nest-html-elements main-section"
+            id="nesting_html_elements"
+          >
+            <header class="main-header">Nesting HTML Elements</header>
             <span class="markup">
               <code>
                 <pre>
@@ -193,8 +231,11 @@
               />
             </figure>
           </section>
-          <section class="what-are-html-attributes" id="par5">
-            <h2>What are HTML Attributes?</h2>
+          <section
+            class="what-are-html-attributes main-section"
+            id="html_attributes"
+          >
+            <header class="main-header">HTML Attributes</header>
             <p>
               Elements also have attributes, which contain extra information
               about the element that will not appear in the content.
@@ -246,8 +287,11 @@
               false value.
             </p>
           </section>
-          <section class="common-html-elements" id="par6">
-            <h2>Common HTML elements</h2>
+          <section
+            class="common-html-elements main-section"
+            id="common_html_elements"
+          >
+            <header class="main-header">Common HTML elements</header>
             <p>
               There are in total more than 100 elements. But 90% of the time you
               will only use around 20 of the most common. I have put them into 5
@@ -331,8 +375,13 @@
               </p>
             </article>
           </section>
-          <section class="block-level-vs-inline-html-elements" id="par7">
-            <h2>Block-level vs inline HTML elements</h2>
+          <section
+            class="block-level-vs-inline-html-elements main-section"
+            id="block-level_vs_inline_html_elements"
+          >
+            <header class="main-header">
+              Block-level vs inline HTML elements
+            </header>
             <p>
               By default, an element can be either block-level or an inline
               element.
@@ -379,8 +428,11 @@
               >.
             </p>
           </section>
-          <section class="how-to-comment-in-html" id="par8">
-            <h2>How to comment in HTML</h2>
+          <section
+            class="how-to-comment-in-html main-section"
+            id="make_comments_in_html"
+          >
+            <header class="main-header">Make Comments in HTML</header>
             <span class="markup">
               <code>
                 <pre>
@@ -399,8 +451,11 @@
               ignored in the browser.
             </p>
           </section>
-          <section class="how-to-use-html-entities" id="par9">
-            <h2>How to use HTML entities</h2>
+          <section
+            class="how-to-use-html-entities main-section"
+            id="html_entities"
+          >
+            <header class="main-header">HTML Entities</header>
             <p>
               What if you want to show the text:
               <span class="gray-bg"
@@ -420,8 +475,11 @@
               </code>
             </span>
           </section>
-          <section class="how-to-use-emojies-in-html" id="par10">
-            <h2>How to use emoji in HTML</h2>
+          <section
+            class="how-to-use-emojies-in-html main-section"
+            id="emojies_in_html"
+          >
+            <header class="main-header">Emojies in HTML</header>
             <p>
               In the modern web, we can display emoji in HTML pretty easily,
               like this: 👻
@@ -435,8 +493,13 @@
               </code>
             </span>
           </section>
-          <section class="common-beginner-mistakes-in-html" id="par11">
-            <h2>Common beginner mistakes in HTML</h2>
+          <section
+            class="common-beginner-mistakes-in-html main-section"
+            id="common_beginner_mistakes_in_html"
+          >
+            <header class="main-header">
+              Common Beginner Mistakes in HTML
+            </header>
             <article>
               <h3>1. Tags/Element names</h3>
               <p>
@@ -483,8 +546,13 @@
               </p>
             </article>
           </section>
-          <section class="how-to-build-a-simple-website-with-html" id="par12">
-            <h2>How to build a simple website with HTML</h2>
+          <section
+            class="how-to-build-a-simple-website-with-html main-section"
+            id="build_a_simple_website_with_html"
+          >
+            <header class="main-header">
+              Build a Simple Website with HTML
+            </header>
             <p>
               Individual HTML elements are not enough to create a website. So
               let's see what more we need to build a simple website from
@@ -848,8 +916,8 @@
               </span>
             </article>
           </section>
-          <section class="conclusion" id="par13">
-            <h2>Conclusion</h2>
+          <section class="conclusion main-section" id="conclusion">
+            <header class="main-header">Conclusion</header>
             <p>
               You can build a simple website with just HTML. But to be able to
               build beautiful and functional websites, you need to study CSS and
@@ -866,8 +934,8 @@
 
             <p>Otherwise, stay happy coding and see you in future posts 👋.</p>
           </section>
-          <section class="about-me" id="about-me">
-            <h2>About me</h2>
+          <section class="about-me main-section" id="about_me">
+            <header class="main-header">About me</header>
             <p>Hello, stranger!</p>
             <p>
               I'm Philip, a coding enthusiast working toward becoming a
